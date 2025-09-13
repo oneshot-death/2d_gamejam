@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://iicdu8mrmmvr"]
+
+[ext_resource type="Script" uid="uid://c4rnm8mosp0gy" path="res://Interactibles/door_spawning.gd" id="1_laxgw"]
+[ext_resource type="Texture2D" uid="uid://5jnma50gqecx" path="res://Sprites/door_zoomed_in.png" id="1_nef16"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_laxgw"]
+size = Vector2(15, 25)
+
+[node name="Door" type="Node2D"]
+script = ExtResource("1_laxgw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_nef16")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2.5, -0.5)
+shape = SubResource("RectangleShape2D_laxgw")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

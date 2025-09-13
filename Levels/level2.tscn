@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dnf5nkm2ojtbs"]
+[gd_scene load_steps=10 format=3 uid="uid://dnf5nkm2ojtbs"]
 
 [ext_resource type="Texture2D" uid="uid://diljkvtkusfj7" path="res://Sprites/world_tileset.png" id="1_24phs"]
 [ext_resource type="PackedScene" uid="uid://dsb527udq05wy" path="res://Player/player.tscn" id="2_ty1rc"]
 [ext_resource type="Script" uid="uid://b2siscbwocdtv" path="res://Interactibles/interaction.gd" id="3_p0prn"]
 [ext_resource type="Texture2D" uid="uid://kn7u0vaja5de" path="res://Sprites/heiroglyphs.png" id="4_dj5hn"]
 [ext_resource type="PackedScene" uid="uid://uetpvi1ce0fx" path="res://Interactibles/canvas_layer.tscn" id="5_ojro4"]
+[ext_resource type="PackedScene" uid="uid://iicdu8mrmmvr" path="res://Interactibles/door.tscn" id="6_dj5hn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ty1rc"]
 texture = ExtResource("1_24phs")
@@ -163,11 +164,11 @@ layer_0/tile_data = PackedInt32Array(1048576, 458752, 1, 1048577, 458752, 1, 983
 layer_1/name = "Mid"
 
 [node name="Player" parent="." instance=ExtResource("2_ty1rc")]
-position = Vector2(70, -658)
+position = Vector2(113, -512)
 scale = Vector2(0.45, 0.45)
 
 [node name="Interaction" type="Node2D" parent="." node_paths=PackedStringArray("ui_layer")]
-position = Vector2(150, -659)
+position = Vector2(127, -658)
 scale = Vector2(0.43, 0.43)
 script = ExtResource("3_p0prn")
 message = "Known by thousands, hated by everybody.It did not matter if I could not see anybody.The light of the moon glistening in my eyes shone its bright wisdom on them, and they were too sighted to notice it."
@@ -184,6 +185,10 @@ texture = ExtResource("4_dj5hn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction/Area2D"]
 position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_6an2m")
+
+[node name="Door" parent="." instance=ExtResource("6_dj5hn")]
+position = Vector2(195, -652)
+next_scene_path = "res://Levels/level3.tscn"
 
 [connection signal="body_entered" from="Interaction/Area2D" to="Interaction" method="_on_body_entered"]
 [connection signal="body_exited" from="Interaction/Area2D" to="Interaction" method="_on_body_exited"]

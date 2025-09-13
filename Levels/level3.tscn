@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://d5q13or11kl4"]
+[gd_scene load_steps=9 format=3 uid="uid://d5q13or11kl4"]
 
 [ext_resource type="Texture2D" uid="uid://diljkvtkusfj7" path="res://Sprites/world_tileset.png" id="1_2385j"]
 [ext_resource type="Texture2D" uid="uid://dgkyrec7y6h5w" path="res://Sprites/world_tileset2.png" id="2_c5oim"]
 [ext_resource type="PackedScene" uid="uid://dsb527udq05wy" path="res://Player/player.tscn" id="3_c5oim"]
 [ext_resource type="PackedScene" uid="uid://c1uqhib7jm8ip" path="res://Interactibles/interaction.tscn" id="4_eh6o7"]
+[ext_resource type="PackedScene" uid="uid://iicdu8mrmmvr" path="res://Interactibles/door.tscn" id="5_vr4rd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eh6o7"]
 texture = ExtResource("1_2385j")
@@ -323,3 +324,7 @@ scale = Vector2(0.45, 0.45)
 position = Vector2(138, -576)
 scale = Vector2(0.43, 0.43)
 message = "Only to think of what could have been if I did not have the light of the world borne deep inside my world, and all its trials and treachery within it. O, to be seen, would I give up this ultimate wisdom! Thus writes the white-eyed wolf of the night."
+
+[node name="Door" parent="." instance=ExtResource("5_vr4rd")]
+position = Vector2(31, -589)
+next_scene_path = "quit_game"

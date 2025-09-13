@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://be48cmjr44jpx"]
+[gd_scene load_steps=7 format=3 uid="uid://be48cmjr44jpx"]
 
 [ext_resource type="Texture2D" uid="uid://diljkvtkusfj7" path="res://Sprites/world_tileset.png" id="1_t21ke"]
 [ext_resource type="PackedScene" uid="uid://c1uqhib7jm8ip" path="res://Interactibles/interaction.tscn" id="3_fy36t"]
 [ext_resource type="PackedScene" uid="uid://dsb527udq05wy" path="res://Player/player.tscn" id="3_njhy2"]
+[ext_resource type="PackedScene" uid="uid://iicdu8mrmmvr" path="res://Interactibles/door.tscn" id="4_njhy2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dopym"]
 texture = ExtResource("1_t21ke")
@@ -149,7 +150,7 @@ texture = ExtResource("1_t21ke")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_dopym")
 
-[node name="Node2D" type="Node2D" groups=["player"]]
+[node name="Level1" type="Node2D" groups=["player"]]
 
 [node name="TileMap" type="TileMap" parent="."]
 physics_interpolation_mode = 1
@@ -166,3 +167,7 @@ scale = Vector2(0.45, 0.45)
 position = Vector2(249, -449)
 scale = Vector2(0.43, 0.43)
 message = "Games of trial and treachery can’t bring you Gaul or reverie.I was once a King of Kings, yet I bore a fragile crown.Looking too much into the moonlight, I became blind.Take one last look at this sacred heart before it blows into a million red mirrors.One final scrawling I draw in the blood of dreams,A cry of lamentation for not being seen."
+
+[node name="Door" parent="." instance=ExtResource("4_njhy2")]
+position = Vector2(322, -445)
+next_scene_path = "res://Levels/level2.tscn"
