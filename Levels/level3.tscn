@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://d5q13or11kl4"]
+[gd_scene load_steps=8 format=3 uid="uid://d5q13or11kl4"]
 
 [ext_resource type="Texture2D" uid="uid://diljkvtkusfj7" path="res://Sprites/world_tileset.png" id="1_2385j"]
 [ext_resource type="Texture2D" uid="uid://dgkyrec7y6h5w" path="res://Sprites/world_tileset2.png" id="2_c5oim"]
 [ext_resource type="PackedScene" uid="uid://dsb527udq05wy" path="res://Player/player.tscn" id="3_c5oim"]
+[ext_resource type="PackedScene" uid="uid://c1uqhib7jm8ip" path="res://Interactibles/interaction.tscn" id="4_eh6o7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eh6o7"]
 texture = ExtResource("1_2385j")
@@ -211,6 +212,7 @@ texture = ExtResource("2_c5oim")
 5:3/0 = 0
 6:3/0 = 0
 7:3/0 = 0
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:3/0 = 0
 9:3/0 = 0
 0:4/0 = 0
@@ -221,6 +223,7 @@ texture = ExtResource("2_c5oim")
 5:4/0 = 0
 6:4/0 = 0
 7:4/0 = 0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:4/0 = 0
 9:4/0 = 0
 0:5/0 = 0
@@ -315,3 +318,8 @@ layer_1/tile_data = PackedInt32Array(983060, 393217, 1, 983061, 393217, 1, 98306
 [node name="Player" parent="." instance=ExtResource("3_c5oim")]
 position = Vector2(24, 228)
 scale = Vector2(0.45, 0.45)
+
+[node name="Interaction" parent="." instance=ExtResource("4_eh6o7")]
+position = Vector2(67, 225)
+scale = Vector2(0.435, 0.435)
+interact_distance = 20.0

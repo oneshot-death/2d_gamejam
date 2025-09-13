@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://uetpvi1ce0fx"]
+
+[ext_resource type="Script" uid="uid://decchowasain1" path="res://canvas_text.gd" id="1_70pxe"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_70pxe")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -131.0
+offset_right = 1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
