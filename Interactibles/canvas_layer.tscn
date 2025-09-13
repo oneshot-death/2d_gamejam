@@ -19,5 +19,6 @@ grow_vertical = 0
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_right = 478.0
+offset_bottom = 35.0
+autowrap_mode = 2

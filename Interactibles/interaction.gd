@@ -2,20 +2,26 @@ extends Node2D
 
 @export var message: String
 @export var ui_layer: CanvasLayer
-@export var interact_distance: float = 64.0
 
-var player: Node2D
-var can_interact: bool = false
+var player_in_range: bool = false
 
 func _ready() -> void:
-	player = get_tree().get_first_node_in_group("player")
-	print(player)
+	$Area2D.connect("body_entered", Callable(self, "_on_body_entered"))
+	$Area2D.connect("body_exited", Callable(self, "_on_body_exited"))
+
+func _on_body_entered(body: Node) -> void:
+	print(body.name)
+	player_in_range = true
+	if has_node("Sprite2D"):
+		$Sprite2D.modulate = Color(1, 1, 1)
+
+func _on_body_exited(body: Node) -> void:
+	ui_layer.hide_message()
+	if body.is_in_group("player"):
+		player_in_range = false
+		if has_node("Sprite2D"):
+			$Sprite2D.modulate = Color(0.6, 0.6, 0.6)
+
 func _process(delta: float) -> void:
-	if not player:
-		print("player not found")
-	
-	var dist = global_position.distance_to(player.global_position)
-	can_interact = dist <= interact_distance
-	
-	if can_interact and Input.is_action_just_pressed("interact"):
+	if player_in_range and Input.is_action_just_pressed("interact"):
 		ui_layer.show_message(message)

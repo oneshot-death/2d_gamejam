@@ -306,7 +306,7 @@ physics_layer_1/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_eh6o7")
 sources/1 = SubResource("TileSetAtlasSource_vr4rd")
 
-[node name="Level3" type="Node2D"]
+[node name="Level3" type="Node2D" groups=["player"]]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_eex2w")
@@ -322,4 +322,4 @@ scale = Vector2(0.45, 0.45)
 [node name="Interaction" parent="." instance=ExtResource("4_eh6o7")]
 position = Vector2(67, 225)
 scale = Vector2(0.435, 0.435)
-interact_distance = 20.0
+message = "Only to think of what could have been if,If, I did not have the light of the world borne deep inside my world,And all its trials and treachery within it. O, to be seen, would I give up this ultimate wisdom! Thus writes the white-eyed wolf of the night."

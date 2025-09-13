@@ -148,7 +148,7 @@ texture = ExtResource("1_t21ke")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_dopym")
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" groups=["player"]]
 
 [node name="TileMap" type="TileMap" parent="."]
 physics_interpolation_mode = 1
