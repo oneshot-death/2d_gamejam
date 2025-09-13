@@ -110,6 +110,8 @@ texture_filter = 1
 texture = ExtResource("1_l8h54")
 hframes = 21
 
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_vtle1")
