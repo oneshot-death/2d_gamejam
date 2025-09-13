@@ -156,6 +156,7 @@ sources/0 = SubResource("TileSetAtlasSource_ty1rc")
 size = Vector2(193, 70)
 
 [node name="Level2" type="Node2D" groups=["player"]]
+position = Vector2(0, -6)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_m135w")
@@ -164,11 +165,11 @@ layer_0/tile_data = PackedInt32Array(1048576, 458752, 1, 1048577, 458752, 1, 983
 layer_1/name = "Mid"
 
 [node name="Player" parent="." instance=ExtResource("2_ty1rc")]
-position = Vector2(113, -512)
+position = Vector2(23, 245)
 scale = Vector2(0.45, 0.45)
 
 [node name="Interaction" type="Node2D" parent="." node_paths=PackedStringArray("ui_layer")]
-position = Vector2(127, -658)
+position = Vector2(167, -658)
 scale = Vector2(0.43, 0.43)
 script = ExtResource("3_p0prn")
 message = "Known by thousands, hated by everybody.It did not matter if I could not see anybody.The light of the moon glistening in my eyes shone its bright wisdom on them, and they were too sighted to notice it."
@@ -187,7 +188,7 @@ position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_6an2m")
 
 [node name="Door" parent="." instance=ExtResource("6_dj5hn")]
-position = Vector2(195, -652)
+position = Vector2(71, -655)
 next_scene_path = "res://Levels/level3.tscn"
 
 [connection signal="body_entered" from="Interaction/Area2D" to="Interaction" method="_on_body_entered"]

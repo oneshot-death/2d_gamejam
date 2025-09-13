@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://decchowasain1" path="res://canvas_text.gd" id="1_70pxe"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_70pxe"]
-line_spacing = 2.0
+line_spacing = 1.8
 font_size = 14
 
 [node name="CanvasLayer" type="CanvasLayer"]
