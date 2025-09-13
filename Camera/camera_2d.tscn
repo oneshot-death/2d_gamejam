@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqdfsacc6xsng"]
+
+[ext_resource type="Script" uid="uid://cpo27st50hump" path="res://Levels/camera_movement.gd" id="1_oat6i"]
+
+[node name="Camera2D" type="Camera2D" node_paths=PackedStringArray("player_node")]
+script = ExtResource("1_oat6i")
+player_node = NodePath("")
