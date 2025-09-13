@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dsb527udq05wy" path="res://Player/player.tscn" id="1_3clbp"]
 [ext_resource type="Texture2D" uid="uid://diljkvtkusfj7" path="res://Sprites/world_tileset.png" id="2_1dycd"]
-[ext_resource type="Script" uid="uid://cij200q4dr4tx" path="res://Levels/teleportation.gd" id="3_jojwj"]
+[ext_resource type="Script" path="res://Levels/teleportation.gd" id="3_jojwj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1dycd"]
 
