@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://dnf5nkm2ojtbs"]
+[gd_scene load_steps=11 format=3 uid="uid://dnf5nkm2ojtbs"]
 
 [ext_resource type="Texture2D" uid="uid://diljkvtkusfj7" path="res://Sprites/world_tileset.png" id="1_24phs"]
+[ext_resource type="Texture2D" uid="uid://du2byo2hsglmd" path="res://Sprites/background1.png" id="1_ojro4"]
 [ext_resource type="PackedScene" uid="uid://dsb527udq05wy" path="res://Player/player.tscn" id="2_ty1rc"]
 [ext_resource type="Script" uid="uid://b2siscbwocdtv" path="res://Interactibles/interaction.gd" id="3_p0prn"]
 [ext_resource type="Texture2D" uid="uid://kn7u0vaja5de" path="res://Sprites/heiroglyphs.png" id="4_dj5hn"]
@@ -157,6 +158,11 @@ size = Vector2(193, 70)
 
 [node name="Level2" type="Node2D" groups=["player"]]
 position = Vector2(0, -6)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(362, -200)
+scale = Vector2(2.43, 2.43)
+texture = ExtResource("1_ojro4")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_m135w")
