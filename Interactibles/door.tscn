@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c4rnm8mosp0gy" path="res://Interactibles/door_spawning.gd" id="1_laxgw"]
 [ext_resource type="Texture2D" uid="uid://5jnma50gqecx" path="res://Sprites/door_zoomed_in.png" id="1_nef16"]
-[ext_resource type="AudioStream" uid="uid://cvucb23kqy5fc" path="res://Music/Door_sound_effect.ogg" id="3_iaqlg"]
+[ext_resource type="AudioStream" uid="uid://croir07mbvxlb" path="res://Music/DOOR_updated.ogg" id="3_iaqlg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_laxgw"]
 size = Vector2(15, 25)
